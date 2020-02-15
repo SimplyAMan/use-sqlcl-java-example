@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    flatDir {dirs 'libs'}
+}
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // https://mvnrepository.com/artifact/org.slf4j/jul-to-slf4j
+    //compile group: 'org.slf4j', name: 'jul-to-slf4j', version: '1.7.25'
+
+    //compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    //compile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.7.25'
+//    testCompile group: 'org.slf4j', name: 'slf4j-jdk14', version: '1.7.25'
+}
+
+group 'ua.huryn.sqlcl.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
